@@ -6,6 +6,10 @@ class Hand
     @cards = cards
   end
 
+  def display
+    puts @cards.map(&:to_s).join(" | ")
+  end
+
   def discard(positions)
     discarded = []
     positions.sort.reverse.each do |pos|
